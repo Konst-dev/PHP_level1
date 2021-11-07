@@ -29,11 +29,11 @@ $year=date('Y');
 //5.        
            $a=1;
            $b=2;
-           echo "<p>a=".$a."  b=".$b."</p>";
+           echo "<p style='font-size: 20px'>a=".$a."  b=".$b."</p>";
            $a=$a+$b;
            $b=$a-$b;
            $a=$a-$b;
-           echo "<p>a=".$a."  b=".$b."</p>";
+           echo "<p style='font-size: 20px'>a=".$a."  b=".$b."</p>";
         ?>
     </BODY>
 </HTML>    
