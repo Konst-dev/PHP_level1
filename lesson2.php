@@ -1,5 +1,6 @@
 <?php
 //1  
+    echo "<h1>Задание 1:</h1>";
     echo "<p>";  
     $a=5;
     $b=-3;
@@ -10,7 +11,8 @@
 
 
 //2  вариант без break  
-echo "<p>";
+echo "<h1>Задание 2:</h1>";
+echo "<p> Без использования break: ";
     $a=8;    
     switch ($a)
     {
@@ -51,7 +53,7 @@ echo "<p>";
     echo "</p>";
 
 //2  вариант c break  
-    echo "<p>";
+    echo "<p> С использованием break: ";
     $a=8;    
     switch ($a)
     {
@@ -106,3 +108,67 @@ echo "<p>";
 
     }
     echo "</p>";
+
+//3
+    function sum($a,$b){
+        return $a+$b;
+    }
+    function sub($a,$b){
+        return $a-$b;
+    }
+    function mul($a,$b){
+        return $a*$b;
+    }
+    function div($a,$b){
+        return $a/$b;
+    }
+
+//4
+    echo "<h1>Задание 4:</h1>";
+    function mathOperation($arg1, $arg2, $operation){
+        switch ($operation)
+        {
+            case '+':
+                return sum($arg1, $arg2);
+            case '-':
+                return sub($arg1, $arg2);  
+            case '*':
+                return mul($arg1, $arg2);
+            case '/':
+                return div($arg1, $arg2); 
+        }
+    }
+    echo "<p>5+7=".mathOperation(5,7,'+')."</p>";
+    echo "<p>5-2=".mathOperation(5,2,'-')."</p>";
+    echo "<p>3*8=".mathOperation(3,8,'*')."</p>";
+    echo "<p>15/3=".mathOperation(15,3,'/')."</p>";
+
+//5 уже было в первом уроке
+
+//6
+    echo "<h1>Задание 6:</h1>";
+    function power($val, $pow){
+        if ($pow==0) return 1;
+        else return $val*power($val,$pow-1);
+    }
+    echo "2^8=".power(2,8);
+
+//7
+    function writeTime(){
+        date_default_timezone_set('Europe/Moscow');
+        echo date('H:i T');
+        $h=date('H');
+        $m=date('i');
+
+        $hours="";
+        if ($h==1||$h=21) $hours="час";
+        else if ($h>1&&$h<5) $hours="часа";
+        else $hours="часов";
+        
+        $minutes="";
+        if($m%10==1&&($m<10||$m>20))$minutes="минута";
+        else if($m%10>=2&&$m%10<=4&&($m<10||$m>20))$minutes="минуты";
+        else $minutes="минут";
+        echo "<p>".$h." ".$hours." ".$m." ".$minutes."</p>";
+    }
+    writeTime();
