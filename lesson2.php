@@ -155,13 +155,11 @@ echo "<p> Без использования break: ";
 
 //7
     function writeTime(){
-        date_default_timezone_set('Europe/Moscow');
-        echo date('H:i T');
         $h=date('H');
         $m=date('i');
 
         $hours="";
-        if ($h==1||$h=21) $hours="час";
+        if ($h==1||$h==21) $hours="час";
         else if ($h>1&&$h<5) $hours="часа";
         else $hours="часов";
         
