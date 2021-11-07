@@ -154,6 +154,7 @@ echo "<p> Без использования break: ";
     echo "2^8=".power(2,8);
 
 //7
+    echo "<h1>Задание 7:</h1>";
     function writeTime(){
         $h=date('H');
         $m=date('i');
