@@ -107,3 +107,5 @@
     }
     echo "<p><b>Исходная строка:</b> ".$myString."</p>";
     echo "<p><b>После преобразования:</b> ".translateTo_($myString)."</p>";
+
+    
