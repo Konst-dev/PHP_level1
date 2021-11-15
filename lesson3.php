@@ -60,3 +60,50 @@
     echo "<p><b>Без пробелов:</b> ".spaceTo_($myString)."</p>";
 
 //6
+    echo "<h1>Задание 6:</h1>";
+    $menu_Array=['Пункт1'=>'URL1',
+                 'Пункт2'=>
+                            ['Подпункт1'=>
+                                            ['ПодПодпункт1'=>'URL5','ПодПодпункт2'=>'URL6'],
+                            'Подпункт2'=>'URL3',
+                            'Подпункт3'=>'URL4'],
+                 'Пункт3'=>'URL5',
+                 'Пункт4'=>'URL7'];
+    function genList($menu){
+        if (count($menu)>0){
+            echo "<ul>";
+            foreach($menu as $li=>$url){
+                if (gettype($url)=="array"){
+                    echo "<li>".$li."</li>";
+                    genList($url);
+                }    
+                else{
+                    echo "<li><a href='".$url."'>".$li."</a></li>";
+                }
+            }
+            echo "</ul>";
+        }
+
+    }
+    genList($menu_Array);
+
+//7
+    echo "<h1>Задание 7:</h1>"; 
+    for($i=0;$i<10;print($i++." "));
+
+//8
+    echo "<h1>Задание 8:</h1>"; 
+    foreach($region_array as $region=>$value){
+        echo "<p><b>".$region.":</b> ";
+        foreach($value as $town)
+        if (mb_substr($town,0,1,'UTF-8')=="К") echo $town.'; ';
+    }
+    echo "</p>";    
+
+//9
+    echo "<h1>Задание 9:</h1>";
+    function translateTo_($str){
+        return spaceTo_(translate($str));
+    }
+    echo "<p><b>Исходная строка:</b> ".$myString."</p>";
+    echo "<p><b>После преобразования:</b> ".translateTo_($myString)."</p>";
