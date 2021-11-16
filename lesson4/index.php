@@ -3,7 +3,7 @@
         $file_array=scandir($path);
         foreach($file_array as $fileName){
             if($fileName!=".."&&$fileName!="."){
-                echo "<div class='card'><img src='".$path."/".$fileName."' width='100%'>";
+                echo "<div class='card'><img class='card_image' src='".$path."/".$fileName."' width='100%'>";
                 echo "</div>";
             }
 
@@ -28,7 +28,7 @@
 
 ?>
 
-
+   <script src='./js/script.js'></script>
    </div> 
 </body>
 </html>
