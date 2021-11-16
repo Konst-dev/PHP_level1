@@ -1,0 +1,16 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.main_block{
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+}
+.card{
+    width:320px;
+    height: 240px;
+    margin-right: 20px;
+    border: 1px solid #555;
+    margin-bottom: 20px;
+}
