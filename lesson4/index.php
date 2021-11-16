@@ -21,14 +21,21 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-   <div class="main_block">
+    <div id='modal' class="modal">
 
-<?php
-  createGalery("./img");
+    </div>
 
-?>
 
-   <script src='./js/script.js'></script>
+        <div class="main_block">
+
+          <?php
+            createGalery("./img");
+
+         ?>
+
+
+
+        <script src='./js/script.js'></script>
    </div> 
 </body>
 </html>
