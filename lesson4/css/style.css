@@ -24,11 +24,7 @@ body{
   border: 5px solid #755;
   background-color: #533;
 }
-/* .big_Img{
-  max-height: 90% !important;
-  height: auto;
-  width: auto;
-} */
+
 .main_block{
   display: flex;
   justify-content: start;

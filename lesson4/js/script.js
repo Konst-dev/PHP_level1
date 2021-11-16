@@ -9,8 +9,8 @@ window.onload = function () {
             var urls = e.currentTarget.getAttribute('src');
             // window.open(urls, "_blank"); 
             modal_window.setAttribute('class', 'modal_show');
-            var vSize = document.documentElement.clientHeight * 0.95;
-            modal_window.innerHTML = "<center><img class='big_Img'  src='" + urls + "' height='" + Math.trunc(vSize) + "px'></center>";
+            var vSize = Math.trunc(document.documentElement.clientHeight * 0.95);
+            modal_window.innerHTML = "<center><img class='big_Img'  src='" + urls + "' height='" + vSize + "px'></center>";
         });
     }
 }
