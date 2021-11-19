@@ -2,7 +2,8 @@
     function createGalery($path){
         $file_array=scandir($path);
         foreach($file_array as $fileName){
-            if($fileName!=".."&&$fileName!="."&&end(explode('.',$fileName))=='jpg'&&filesize($path."/".$fileName)<1024*1024){
+
+            if($fileName!=".."&&$fileName!="."&&end(explode('.',$fileName))=='jpg'/*&&filesize($path."/".$fileName)<1024*1024*/){
                 echo "<div class='card'><img class='card_image' src='".$path."/".$fileName."' width='100%'>";
                 echo "</div>";
             }
