@@ -40,14 +40,11 @@
 <body>
     <form method="post">
         <input name="first_num"/>
-        <select name="actions">
-            <option value="+">+</option>
-            <option value="-">-</option>
-            <option value="*">*</option>
-            <option value="/">/</option>
-        </select>
         <input  name="second_num"/>
-        <input type="submit" value="Вычислить">
+        <input type="submit" name='actions' value="+">
+        <input type="submit" name='actions' value="-">
+        <input type="submit" name='actions' value="*">
+        <input type="submit" name='actions' value="/">
 
         <?php
             //var_dump($_POST);
