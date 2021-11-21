@@ -1,0 +1,42 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.text{
+  font-size: 20px;
+}
+.wrapper{
+  position: relative;
+  z-index: 1;
+}
+.modal{
+  width: 1px;
+  height: 1px;
+  display: none;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+.modal_show{
+  width: 95%;
+  height: 95%;
+  display: block;
+  position: fixed;
+  left: 10px;
+  top: 10px;
+  border: 5px solid #755;
+  background-color: #533;
+}
+
+.main_block{
+  display: flex; 
+  justify-content: start; 
+  flex-wrap: wrap;
+}
+.card{
+    width:320px;
+    height: 240px;
+    margin-right: 20px;
+    border: 1px solid #555;
+    margin-bottom: 20px;
+}
