@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Магазин{% endblock %}
+
+{% block body %}
+<style>
+    .wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
+    }
+    .title{
+        text-align: center;
+    }
+    .card{
+        width: 200px;
+        height: 100px;
+        border-radius: 10px;
+        background-color: aquamarine;
+        border: 1px solid #000;
+        margin-right: 10px;
+        margin-top: 10px;
+    }
+    .card:hover{
+        background-color: brown;
+    }
+    .text{
+        text-align: center; 
+    }
+
+</style>
+
+<div class="wrapper">
+    {% for product in products %}
+        <div class='card'>
+            <h2 class='title'>{{ product.getName() }} </h2>
+            <p class='text'> {{ product.getPrice() }} </p>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
